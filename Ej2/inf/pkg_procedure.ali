@@ -1,0 +1,78 @@
+V "GNAT Lib v9"
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U pkg_procedure%b	pkg_procedure.adb	4d7431f0 NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z interfaces%s		interfac.ads		interfac.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.val_int%s	s-valint.adb		s-valint.ali
+
+U pkg_procedure%s	pkg_procedure.ads	ff1b8321 EE NE OO PK IL
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-charac.ads		20200312110721 2d3ec45b ada.characters%s
+D a-chahan.ads		20200312110721 1601a50f ada.characters.handling%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D pkg_procedure.ads	20210418105912 ff1b8321 pkg_procedure%s
+D pkg_procedure.adb	20210418231210 2c73a484 pkg_procedure%b
+D system.ads		20200312110721 4635ec04 system%s
+D s-conca3.ads		20200312110721 0b705ca5 system.concat_3%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-valint.ads		20200312110721 48a52a3f system.val_int%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 13|1r6 2r6 22r13 23r13 25r17 26r20 29r21 35r20 40r13 45r21
+. 46r21
+X 2 a-charac.ads
+16K13*Characters 18e19 13|2r10 26r24
+X 3 a-chahan.ads
+36K24*Handling 159e28 13|2w21 26r35
+50V13*Is_Digit{boolean} 13|26s44
+X 8 a-textio.ads
+49K13*Text_IO 471e16 13|1w10 22r17 23r17 25r21 29r25 35r24 40r17 45r25 46r25
+166U14*New_Line 13|22s25 40s25 45s33
+208U14*Put 13|29s33
+223U14*Get_Immediate 13|25s29
+242U14*Put 13|23s25 35s32
+263U14*Put_Line 13|46s33
+X 12 pkg_procedure.ads
+1K9*pkg_procedure 3l5 3e18 13|4b14 49l5 49t18
+2U15*Leer_Entero 2<27 13|5b15 48l13 48t24
+2i27 Num{integer} 13|5b27 41m13 47m21
+X 13 pkg_procedure.adb
+9e9 Intro{character} 30r30
+11e9 Back{character} 32r43
+13e9 Char{character} 25m44 26r54 28r46 29r38 30r23 32r36
+14b9 Fin{boolean} 24r23 31m21
+15i9 Numero{natural} 27m21 27r31 28r35 32r23 36m20 36r28 39m13 39r58 41r20
+19a9 Cadena_Numero{string} 28m21 39r38 46r59
+
