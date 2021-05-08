@@ -1,0 +1,82 @@
+V "GNAT Lib v9"
+M P W=b
+P ZX
+
+RN
+RV NO_DELAY
+RV NO_IO
+RV SPARK_05
+
+U main%b		main.adb		618ceb2b NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W tareas%s		tareas.adb		tareas.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20200312110721 0240fc73 ada.real_time%s
+D a-retide.ads		20200312110721 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-c.ads		20200312110721 5421119b interfaces.c%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D main.adb		20210507160227 0e130bd6 main%b
+D system.ads		20200312110721 4635ec04 system%s
+D s-atacco.ads		20200312110721 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-linux.ads		20200312110721 ed0b8aee system.linux%s
+D s-multip.ads		20200312110721 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20200808120453 0b994636 system.os_constants%s
+D s-osinte.ads		20200312110721 710cf8c6 system.os_interface%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stausa.ads		20200312110721 017a0a05 system.stack_usage%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20200312110721 2b3f8252 system.task_info%s
+D s-taspri.ads		20200312110721 f40ac08d system.task_primitives%s
+D s-taprop.ads		20200312110721 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20200312110721 b9d612e2 system.tasking%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+D tareas.ads		20210507151025 e5c2afd4 tareas%s
+X 1 ada.ads
+16K9*Ada 20e8 13|1r6 1r25 2r6 2r23
+X 4 a-reatim.ads
+39K13*Real_Time 185e18 13|1w10 1r29
+49O9*Time<duration> 13|8r20
+54O9*Time_Span<duration> 13|6r18 7r23
+61V13*Clock{49O9} 13|10s21
+65V14*"+"{49O9} 13|15s39 25s39 34s39 43s39
+119V13*Milliseconds{54O9} 13|6s29 7s34
+X 8 a-textio.ads
+49K13*Text_IO 471e16 13|2w10 2r27
+263U14*Put_Line 13|12s9 14s9 21s9 24s9 30s9 33s9 39s9 42s9 48s9 50s9
+X 13 main.adb
+5U11*main 5b11 52l5 52t9
+6o5 Superperiodo{4|54O9}
+7o5 PeriodoSecundario{4|54O9} 15r40 25r40 34r40 43r40
+8o5 SiguienteMarco{4|49O9} 10m5 15m9 15r25 20r21 25m9 25r25 29r21 34m9 34r25
+. 38r21 43m9 43r25 47r21
+X 27 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 37 tareas.ads
+4K9*tareas 13|3w6 3r17 37|10e11
+5U15*A 13|16s9 26s9 35s9 44s9
+6U15*B 13|17s9 27s9 36s9 45s9
+7U15*C 13|18s9 37s9
+8U15*D 13|28s9 46s9
+9U15*E 13|19s9
+

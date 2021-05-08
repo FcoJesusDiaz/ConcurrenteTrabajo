@@ -1,0 +1,100 @@
+V "GNAT Lib v9"
+P ZX
+
+RN
+RV SIMPLE_BARRIERS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_PROTECTED_TYPES
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+RV MAX_PROTECTED_ENTRIES=2
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U ollas%b		ollas.adb		27d3ca5f NE OO PK IL
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W pkg_sem%s		pkg_sem.adb		pkg_sem.ali
+Z system%s		system.ads		system.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+
+U ollas%s		ollas.ads		f036bea0 EE NE OO PK IL
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-finali.ads		20200312110721 bf4f806b ada.finalization%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-c.ads		20200312110721 5421119b interfaces.c%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D ollas.ads		20210508002254 f036bea0 ollas%s
+D ollas.adb		20210507233109 d976505c ollas%b
+D pkg_sem.ads		20210507232121 0e9324a3 pkg_sem%s
+D system.ads		20200312110721 4635ec04 system%s
+D s-atacco.ads		20200312110721 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-finroo.ads		20200312110721 4ff27390 system.finalization_root%s
+D s-linux.ads		20200312110721 ed0b8aee system.linux%s
+D s-multip.ads		20200312110721 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20200808120453 0b994636 system.os_constants%s
+D s-osinte.ads		20200312110721 710cf8c6 system.os_interface%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stausa.ads		20200312110721 017a0a05 system.stack_usage%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20200312110721 2b3f8252 system.task_info%s
+D s-taspri.ads		20200312110721 f40ac08d system.task_primitives%s
+D s-taskin.ads		20200312110721 b9d612e2 system.tasking%s
+D s-taprob.ads		20200312110721 acd6094d system.tasking.protected_objects%s
+D s-tpoben.ads		20200312110721 60ad3dae system.tasking.protected_objects.entries%s
+D s-tpobop.ads		20200312110721 5f548bb3 system.tasking.protected_objects.operations%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+X 12 ollas.ads
+1K9*ollas 10E12 20l5 20e10 13|2b14 39l5 39t10
+3W9*Olla 5r30 6r31 7r38 12d27 12d56 17E10 19l11 19e15 13|4r30 9r31 14r38
+. 19b19 38l8 38t12
+5U14*Coger 5=20 13|4b14 7l8 7t13
+5w20 O{3W9} 13|4b20 6r7
+6U14*LLenar 6=21 13|9b14 12l8 12t14
+6w21 O{3W9} 13|9b21 11r7
+7V13*Get_nRaciones{integer} 7=28 13|14b13 17l8 17t21
+7w28 O{3W9} 13|14b28 16r14
+10E12 Status 10e35 12r40 17r18
+10n23 FULL{10E12} 12r50 13|20r33 31r18
+10n29 EMPTY{10E12} 13|24r22 28r34
+12e27 Estado_olla{10E12} 17r28
+12i56 nRaciones{integer} 18r29
+13Y16 Coger 13|6s9 20b13 26l11 26t16
+14Y16 LLenar 13|11s9 28b13 32l11 32t17
+15V19 Get_nRaciones{integer} 15>33 13|16s16 34b16 37l11 37t24
+15i33 R{integer} 13|34b31
+17e10 Estado{10E12} 13|20r24 24r13 28r25 31r10
+18i10 raciones{integer} 13|22r10 22r20 23r13 30r10 36r17
+X 14 pkg_sem.ads
+2K9*pkg_sem 13|1w6 1r18 14|28e12
+X 29 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+
