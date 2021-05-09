@@ -2,44 +2,45 @@ V "GNAT Lib v9"
 P ZX
 
 RN
+RV SIMPLE_BARRIERS
 RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
 RV NO_IO
-RV NO_SELECT_STATEMENTS
+RV NO_PROTECTED_TYPES
 RV NO_STANDARD_STORAGE_POOLS
-RV NO_TASKING
 RV NO_DYNAMIC_SIZED_OBJECTS
-RV NO_ELABORATION_CODE
 RV SPARK_05
-RV MAX_SELECT_ALTERNATIVES=2
-RV MAX_TASK_ENTRIES=2
+RV MAX_PROTECTED_ENTRIES=2
+RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U pkg_tarea%b		pkg_tarea.adb		964e3f6a OO PK IL
+U ollas%b		ollas.adb		d06bd1f0 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W pkg_sem%s		pkg_sem.adb		pkg_sem.ali
 Z system%s		system.ads		system.ali
-Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.concat_3%s	s-conca3.adb		s-conca3.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
-Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
-Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 
-U pkg_tarea%s		pkg_tarea.ads		2c8b903b EE NE OO PK IL
-Z ada.real_time%s	a-reatim.adb		a-reatim.ali
+U ollas%s		ollas.ads		97668852 EE NE OO PK IL
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W pkg_sem%s		pkg_sem.adb		pkg_sem.ali
 Z system%s		system.ads		system.ali
-Z system.parameters%s	s-parame.adb		s-parame.ali
-Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
-Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
 
 D ada.ads		20200312110721 76789da1 ada%s
 D a-except.ads		20200312110721 291912d5 ada.exceptions%s
 D a-finali.ads		20200312110721 bf4f806b ada.finalization%s
 D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
-D a-reatim.ads		20200312110721 0240fc73 ada.real_time%s
 D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
 D a-tags.ads		20200312110721 491b781d ada.tags%s
 D a-textio.ads		20200312110721 881db35a ada.text_io%s
@@ -47,11 +48,11 @@ D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-c.ads		20200312110721 5421119b interfaces.c%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
-D pkg_tarea.ads		20210509112535 2c8b903b pkg_tarea%s
-D pkg_tarea.adb		20210419005219 32d81c0b pkg_tarea%b
+D ollas.ads		20210509110624 746fc2d1 ollas%s
+D ollas.adb		20210509121734 cf10eaf8 ollas%b
+D pkg_sem.ads		20210509115549 e3094a83 pkg_sem%s
 D system.ads		20200312110721 4635ec04 system%s
 D s-atacco.ads		20200312110721 4c36d12f system.address_to_access_conversions%s
-D s-conca2.ads		20200312110721 02a0d7d0 system.concat_2%s
 D s-conca3.ads		20200312110721 0b705ca5 system.concat_3%s
 D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200312110721 54135002 system.exception_table%s
@@ -71,32 +72,47 @@ D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
 D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
 D s-tasinf.ads		20200312110721 2b3f8252 system.task_info%s
 D s-taspri.ads		20200312110721 f40ac08d system.task_primitives%s
-D s-taprop.ads		20200312110721 1dd2e1b6 system.task_primitives.operations%s
 D s-taskin.ads		20200312110721 b9d612e2 system.tasking%s
 D s-taprob.ads		20200312110721 acd6094d system.tasking.protected_objects%s
 D s-tpoben.ads		20200312110721 60ad3dae system.tasking.protected_objects.entries%s
-D s-tasren.ads		20200312110721 a67a9949 system.tasking.rendezvous%s
-D s-tassta.ads		20200312110721 cca55c94 system.tasking.stages%s
+D s-tpobop.ads		20200312110721 5f548bb3 system.tasking.protected_objects.operations%s
 D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
 X 1 ada.ads
-16K9*Ada 20e8 14|1r6 2r5 23r21
-X 8 a-textio.ads
-49K13*Text_IO 471e16 14|1w10 2r9 23r25
-166U14*New_Line 14|23s33
-263U14*Put_Line 14|13s25 16s25 22s21 24s21
-X 13 pkg_tarea.ads
-1K9*pkg_tarea 6l5 6e14 14|4b14 30l5 30t14
-2T15*tarea_t 5l9 5e16 14|5b15 29l9 29t16
-3Y19 EsPar 3>25 14|11b24 19l21 19t26
-3i25 N{integer} 14|12r24 13r64 16r64
-4Y19 EstadoConsultas 14|21b24 25l21 25t36
-X 14 pkg_tarea.adb
-6i9 nPares{integer} 14m25 14r33 22r93
-7i9 nImpares{integer} 17m25 17r35 24r95
-11i31 N{integer}
-X 32 s-stausa.ads
+16K9*Ada 20e8 13|2r6 2r23
+X 7 a-textio.ads
+49K13*Text_IO 471e16 13|2w10 2r27
+263U14*Put_Line 13|19s10 21s10 30s10
+X 12 ollas.ads
+2K9*ollas 16l5 16e10 13|4b14 35l5 35t10
+3E9*Status 3e32 5r37 10r18
+3n20*FULL{3E9} 5r47 13|17r63 32r18
+3n26*EMPTY{3E9} 13|23r22 28r34
+5W19*Olla 5d24 5d53 10E10 12l8 12e12 14r43 15r31 13|6r44 11r31 16b19 34l8
+. 34t12
+5e24 Estado_olla{3E9} 10r28
+5i53 nRaciones{integer} 11r29
+6Y13 Coger 6>19 6=33 13|8s9 17b13 26l11 26t16
+6e19 Id{character} 13|19r33
+6w33 E{14|4W20} 13|24m20
+7Y13 LLenar 13|13s9 28b13 33l11 33t17
+10e10 Estado{3E9} 13|17r54 23r13 28r25 32r10
+11i10 raciones{integer} 13|20r10 20r20 21r45 22r13 31r10
+14U14*Coger 14>20 14=33 14=49 13|6b14 9l8 9t13
+14e20 Id{character} 13|6b20 8r15
+14w33 O{5W19} 13|6b34 8r7
+14w49 E{14|4W20} 13|6b50 8m18
+15U14*LLenar 15=21 13|11b14 14l8 14t14
+15w21 O{5W19} 13|11b21 13r7
+X 13 ollas.adb
+17e19 Id{character}
+17w33 E{14|4W20}
+X 14 pkg_sem.ads
+3K9*pkg_sem 12|1w6 1r18 13|1w6 1r18 14|14e12
+4W20*sem_t 12|6r43 14r59 13|6r60 17r42 14|10e14
+12U15*signal 13|24s13
+X 31 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 

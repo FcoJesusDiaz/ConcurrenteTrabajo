@@ -1,5 +1,6 @@
 package pkg_sem is  
-    type sem_t is limited private;   
+    type sem_t is limited private; 
+      
     procedure signal(sem : in out sem_t);   
     procedure wait(sem : in out sem_t);
     

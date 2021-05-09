@@ -42,9 +42,9 @@ D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-c.ads		20200312110721 5421119b interfaces.c%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
-D ollas.ads		20210508002254 f036bea0 ollas%s
+D ollas.ads		20210508103203 f036bea0 ollas%s
 D ollas.adb		20210507233109 d976505c ollas%b
-D pkg_sem.ads		20210507232121 0e9324a3 pkg_sem%s
+D pkg_sem.ads		20210508103421 0e9324a3 pkg_sem%s
 D system.ads		20200312110721 4635ec04 system%s
 D s-atacco.ads		20200312110721 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s

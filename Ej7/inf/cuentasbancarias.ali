@@ -3,54 +3,71 @@ P ZX
 
 RN
 RV SIMPLE_BARRIERS
+RV NO_DELAY
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
 RV NO_IO
 RV NO_PROTECTED_TYPES
+RV NO_RELATIVE_DELAY
 RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
 RV SPARK_05
 RV MAX_PROTECTED_ENTRIES=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U pkg_sem%b		pkg_sem.adb		974bab79 NE OO PK IL
+U cuentasbancarias%b	cuentasbancarias.adb	abb06a8c NE OO PK IL
+W ada%s			ada.ads			ada.ali
+Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.task_identification%s  a-taside.adb	a-taside.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
 Z system%s		system.ads		system.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.concat_5%s	s-conca5.adb		s-conca5.ali
+Z system.concat_7%s	s-conca7.adb		s-conca7.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
 Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
 Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 
-U pkg_sem%s		pkg_sem.ads		868e97f9 EE NE OO PK IL
-W ada%s			ada.ads			ada.ali
+U cuentasbancarias%s	cuentasbancarias.ads	8494c391 EE NE OO PK IL
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
-W ada.text_io%s		a-textio.adb		a-textio.ali
 Z system%s		system.ads		system.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
 Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
 
 D ada.ads		20200312110721 76789da1 ada%s
+D a-calend.ads		20200312110721 b288ede8 ada.calendar%s
+D a-caldel.ads		20200312110721 9f20b83d ada.calendar.delays%s
 D a-except.ads		20200312110721 291912d5 ada.exceptions%s
 D a-finali.ads		20200312110721 bf4f806b ada.finalization%s
 D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
 D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-taside.ads		20200312110721 c3e0cda8 ada.task_identification%s
 D a-textio.ads		20200312110721 881db35a ada.text_io%s
 D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D cuentasbancarias.ads	20210509002229 8494c391 cuentasbancarias%s
+D cuentasbancarias.adb	20210509002446 64d9d7ef cuentasbancarias%b
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-c.ads		20200312110721 5421119b interfaces.c%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
-D pkg_sem.ads		20210508103421 0e9324a3 pkg_sem%s
-D pkg_sem.adb		20210507222715 99d88fda pkg_sem%b
 D system.ads		20200312110721 4635ec04 system%s
 D s-atacco.ads		20200312110721 4c36d12f system.address_to_access_conversions%s
+D s-conca3.ads		20200312110721 0b705ca5 system.concat_3%s
+D s-conca5.ads		20200312110721 875e432e system.concat_5%s
+D s-conca7.ads		20200312110721 fcc75b1f system.concat_7%s
 D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200312110721 54135002 system.exception_table%s
 D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
 D s-finroo.ads		20200312110721 4ff27390 system.finalization_root%s
+D s-imgint.ads		20200312110721 02dbe0c2 system.img_int%s
 D s-linux.ads		20200312110721 ed0b8aee system.linux%s
 D s-multip.ads		20200312110721 38ac9f73 system.multiprocessors%s
 D s-oscons.ads		20200808120453 0b994636 system.os_constants%s
@@ -72,30 +89,55 @@ D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
 X 1 ada.ads
-16K9*Ada 20e8 12|1r6 1r23
-X 7 a-textio.ads
-49K13*Text_IO 471e16 12|1w10 1r27
-X 12 pkg_sem.ads
-2K9*pkg_sem 13E24 28l5 28e12 13|1b14 47l5 47t12
-3W10*sem_t 6r35 7r33 13d30 18E17 19l13 19e18 13|3r35 8r33 24b20 34l9 34t14
-4W10*mutex 9r40 10r38 21d30 26E17 27l13 27e18 13|13r40 18r38 36b20 46l9 46t14
-6U15*signal 6=22 13|3b15 6l9 6t15
-6w22 sem{3W10} 13|3b22 5r9
-7U15*wait 7=20 13|8b15 11l9 11t13
-7w20 sem{3W10} 13|8b20 10r9
-9U15*signalMutex 9=27 13|13b15 16l9 16t20
-9w27 sem{4W10} 13|13b27 15r9
-10U15*waitMutex 10=25 13|18b15 21l9 21t18
-10w25 sem{4W10} 13|18b25 20r9
-13i30 valor_inicial{integer} 18r40
-14Y19 wait 13|10s13 25b19 28l17 28t21
-15U23 signal 13|5s13 30b23 33l17 33t23
-18i17 valor_sem{integer} 13|25r29 27r17 27r28 32r17 32r28
-21i30 valor_inicial{integer} 26r40
-22Y19 wait 13|20s13 37b19 40l17 40t21
-23U23 signal 13|15s13 42b23 45l17 45t23
-26i17 valor_sem{integer} 13|37r29 39r17 39r28 44r17 44r28
-X 28 s-stausa.ads
+16K9*Ada 20e8 13|1r6 1r22 2r6 2r34
+X 9 a-taside.ads
+39K13*Task_Identification 95e28 13|2w10 2r38
+X 10 a-textio.ads
+49K13*Text_IO 471e16 13|1w10 1r26
+263U14*Put_Line 13|8s9 9s9 15s9 22s9 31s9 47s13 53s13
+X 12 cuentasbancarias.ads
+2K9*cuentasbancarias 20l5 20e21 13|4b14 56l5 56t21
+3E10*Status 3e52 11r21
+3n21*ENOUGH_MONEY{3E10} 11r30
+3n35*NOT_ENOUGH_MONEY{3E10}
+4W20*Cuenta 4d27 10E13 13l9 13e15 15r59 16r65 17r67 19r22 19r47 13|6r59 13r65
+. 20r67 29r21 29r46 38b20 55l9 55t15
+4i27 saldoInicial{integer} 10r30
+5V18 Consultar{integer} 13|9s67 39b18 42l13 42t22
+6Y15 Extraer 6>23 6>36 13|16s11 32s18 44b15 48l13 48t20
+6i23 Cant{integer} 13|46r26
+6e36 Id{character} 13|47r85
+7U19 Ingresar 7>28 7>38 13|23s11 34s19 50b19 54l13 54t21
+7i28 I{integer} 13|50b28 52r26
+7e38 Id{character} 13|50b38 53r86
+10i13 Saldo{integer} 13|41r20 44r55 46r13 46r20 47r57 52r13 52r20 53r58
+11e13 Estado{3E10}
+12i13 Cant{integer} 13|44r64
+15U15*Consultar 15>25 15>38 15>57 13|6b15 11l9 11t18
+15e25 Id{character} 13|6b25 8r31 9r31
+15e38 IdCuenta{character} 13|6b38 9r114
+15w57 C{4W20} 13|6b57 9r65
+16U15*Extraer 16>23 16>36 16=55 16>72 13|13b15 18l9 18t16
+16e23 Id{character} 13|13b23 15r31
+16e36 IdCuenta{character} 13|13b36 16r21
+16w55 C{4W20} 13|13b56 16r9
+16i72 I{integer} 13|13b73 15r69 16r19
+17U15*Ingresar 17>24 17>37 17=57 17>74 13|20b15 26l9 26t17
+17e24 Id{character} 13|20b24 22r31
+17e37 Id_Cuenta{character} 13|20b37 23r22
+17w57 C{4W20} 13|20b57 23r9
+17i74 I{integer} 13|20b74 22r69 23r20
+18U15*Transferir 18>26 18>39 18>65 18>92 19=6 19=30 13|28b15 36l9 36t19
+18e26 Id{character} 13|28b26 31r31
+18e39 Id_CuentaOrigen{character} 13|28b39 32r28
+18e65 Id_CuentaDestino{character} 13|28b65 34r30
+18i92 I{integer} 13|28b92 32r26 34r28
+19w6 C_Origen{4W20} 13|29b5 32r9
+19w30 C_Destino{4W20} 13|29b29 34r9
+X 13 cuentasbancarias.adb
+44i23 Cant{integer}
+44e36 Id{character}
+X 35 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 

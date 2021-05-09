@@ -6,36 +6,25 @@ with Ada.Numerics.Discrete_Random;
 
 procedure main is
     Num_Canibales: Positive;
-    type P_mutex is access mutex;
     type P_Olla is access Olla;
     type P_sem_t is access sem_t;
 
     function randomDuration(I:Integer)return Duration;
 
-    task type Tcanibal(Id:Character; mut:P_mutex; full:P_sem_t; empty:P_sem_t; oll:P_Olla);
+    task type Tcanibal(Id:Character; empty:P_sem_t; oll:P_Olla);
 
     task body Tcanibal is
         procedure Comer is
-            nRac:Integer;
         begin
-            Put("[CANIBAL " & Id & "]: Esperando olla libre..."); New_line;
-            waitMutex(mut.all);
-                nRac:=Get_nRaciones(oll.all); 
-                Put_Line("Queda(n)" & Integer'Image(nRac) & " racion/es");New_line;
-                    if nRac = 0 then
-                    Put("[CANIBAL " & Id & "]: Despertando al cocinero... "); New_line;
-                    signal(empty.all);
-                    wait(full.all);
-                end if;
-                Coger(oll.all);
-                Put("[CANIBAL " & Id & "]: Comiendo... "); New_line;
-                delay 2.0;
-            signalMutex(mut.all);
+            Put_Line("[CANIBAL " & Id & "]: Accediendo a la olla... ");
+            delay 2.0;
+            Coger(Id,oll.all,empty.all);
+            delay 2.0;
         end Comer;
 
         procedure Bailar is
         begin
-            Put_Line("[CANIBAL " & Id & "]: Bailando... "); New_line;
+            Put_Line("[CANIBAL " & Id & "]: Bailando... "); 
             delay randomDuration(0);
         end Bailar;
     begin
@@ -45,21 +34,19 @@ procedure main is
         end loop;
     end Tcanibal;
 
-    task type Tcocinero(full:P_sem_t; empty:P_sem_t; oll:P_Olla);
+    task type Tcocinero(empty:P_sem_t; oll:P_Olla);
     task body Tcocinero is
         procedure Dormir is
         begin
-            Put("[COCINERO]: Durmiendo... "); New_line;
+            Put_Line("[COCINERO]: Durmiendo... ");
             wait(empty.all);
         end Dormir;
 
         procedure Reponer is
         begin
-            Put("[COCINERO]: LLenando olla vacía... "); New_line;
+            Put_Line("[COCINERO]: LLenando olla vacía... ");
             delay 5.0;
             LLenar(oll.all);
-            signal(full.all);
-            Put("[COCINERO]: Olla llena... "); New_line;
         end Reponer;
 
     begin
@@ -94,19 +81,15 @@ begin
         oll:P_Olla;
         Cocinero:P_Tcocinero;
         Canibal:P_Tcanibal;
-        full:P_sem_t;
         empty:P_sem_t;
-        mut:P_mutex;
         C:Character:='A';
 
     begin
-        full:=new sem_t;
         empty:=new sem_t;
-        mut:=new mutex;
         oll:=new Olla;
-        Cocinero:=new Tcocinero(full,empty,oll);
+        Cocinero:=new Tcocinero(empty,oll);
         for i in 1..Num_Canibales loop
-           Canibal:=new Tcanibal(C,mut,full,empty,oll);
+           Canibal:=new Tcanibal(C,empty,oll);
            C := Character'Succ(C);
         end loop;
     end;

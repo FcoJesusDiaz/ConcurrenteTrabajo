@@ -8,19 +8,13 @@ all: dirs main
 dirs:
 	mkdir -p src inf obj exec
 
-move: dirs
-	mv *.adb src
-	mv *.ads src
-
 main: $(SRC)main.adb
-	gnatmake $^
-	mv main.ali $(INF)
-	mv main.o $(OBJ)
-	mv $@ $(EXEC)
+	gnatmake $^ ; mv $@ $(EXEC) ; mv *.ali $(INF) ; mv *.o $(OBJ)
 
-test: $(EXEC)main
+test: 
 	$(EXEC)main	
 
 clean: 
 	rm -rf *~ $(OBJ) $(INF) $(EXEC) 
+
 
